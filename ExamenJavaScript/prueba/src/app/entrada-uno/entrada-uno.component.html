@@ -7,8 +7,7 @@
       </div>
       <div class="col-sm-6">
         <mat-form-field  class="example-full-width">
-          <input matInput placeholder="Nombre:"
-                 [(ngModel)]="model.nombre" name="nombre" >
+          <input type="text" #textoInput matInput placeholder=" " >
         </mat-form-field>
       </div>
 
@@ -59,7 +58,7 @@
   </form>
   <div class="row sa-centrar">
     <div class="col-sm-6 center">
-      <button (click)="fu" mat-button>Crear</button>
+      <button (click)="crearEquipos(textoInput.value)" mat-button>Crear</button>
 
       <!--<button (click)="crearEquipos(textoInput.value)">-->
         <!--dfdfdf-->
