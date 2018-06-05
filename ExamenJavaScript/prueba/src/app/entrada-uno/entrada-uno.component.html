@@ -1,0 +1,76 @@
+<div>
+  <h3 style="text-align: center">Informacion del Equipo</h3>
+  <form class="example-form">
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Nombre</p>
+      </div>
+      <div class="col-sm-6">
+        <mat-form-field  class="example-full-width">
+          <input matInput placeholder="Nombre:"
+                 [(ngModel)]="model.nombre" name="nombre" >
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Liga</p>
+      </div>
+      <div class="col-sm-6">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder=" " >
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Fecha de Creacion</p>
+      </div>
+      <div class="col-sm-6">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder=" " >
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Numero de copas Internacionales</p>
+      </div>
+      <div class="col-sm-6">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder=" " >
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Campeonato Actual</p>
+      </div>
+      <div class="col-sm-6">
+        <mat-form-field class="example-full-width">
+          <input  matInput placeholder=" " >
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+  <div class="row sa-centrar">
+    <div class="col-sm-6 center">
+      <button (click)="fu" mat-button>Crear</button>
+
+      <!--<button (click)="crearEquipos(textoInput.value)">-->
+        <!--dfdfdf-->
+      <!--</button>-->
+      <!--<p>{{textoInput.value}}</p>-->
+
+    </div>
+    <div class="col-sm-6 center">
+      <button mat-button>Limpiar</button>
+    </div>
+
+  </div>
+
+</div>
