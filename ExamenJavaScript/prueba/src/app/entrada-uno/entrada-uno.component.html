@@ -7,7 +7,7 @@
       </div>
       <div class="col-sm-6">
         <mat-form-field  class="example-full-width">
-          <input type="text" #textoInput matInput placeholder=" " >
+          <input type="text" #textoInput matInput placeholder="" value={{nombre}} >
         </mat-form-field>
       </div>
 
@@ -18,7 +18,7 @@
       </div>
       <div class="col-sm-6">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder=" " >
+          <input matInput placeholder=" "  value={{liga}}>
         </mat-form-field>
       </div>
 
@@ -29,7 +29,7 @@
       </div>
       <div class="col-sm-6">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder=" " >
+          <input matInput placeholder=" " value={{fecha}} >
         </mat-form-field>
       </div>
 
@@ -40,7 +40,7 @@
       </div>
       <div class="col-sm-6">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder=" " >
+          <input matInput placeholder=" " value={{numero}} >
         </mat-form-field>
       </div>
 
@@ -51,7 +51,7 @@
       </div>
       <div class="col-sm-6">
         <mat-form-field class="example-full-width">
-          <input  matInput placeholder=" " >
+          <input  matInput placeholder=" " value={{campeonato}} >
         </mat-form-field>
       </div>
     </div>
@@ -67,7 +67,7 @@
 
     </div>
     <div class="col-sm-6 center">
-      <button mat-button>Limpiar</button>
+      <button mat-button (click)="funcionLimpiar()">Limpiar</button>
     </div>
 
   </div>
