@@ -19,6 +19,7 @@ import {ChipsModule} from 'primeng/chips';
 import {ButtonModule} from 'primeng/button';
 import { EntradaDosComponent } from './entrada-dos/entrada-dos.component';
 import { EquiposIngresadosComponent } from './equipos-ingresados/equipos-ingresados.component';
+import {TableModule} from 'primeng/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { EquiposIngresadosComponent } from './equipos-ingresados/equipos-ingresa
     CardModule,
     TabViewModule,
     ChipsModule,
-    ButtonModule
+    ButtonModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
