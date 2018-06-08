@@ -242,41 +242,7 @@
     </div>
     <div class="row"><p></p></div>
     <div class="row">
-      <!--<app-talba-prime></app-talba-prime>-->
-      <!--<h3 class="first">Jugadores</h3>-->
-      <!--<p-table >-->
-        <!--<ng-template pTemplate="header">-->
-          <!--<tr>-->
-            <!--<th>Numero en la Camiseta</th>-->
-            <!--<th>Nombre en la Camiseta</th>-->
-            <!--<th>Nombre del Jugador</th>-->
-            <!--<th>Poder del jugador</th>-->
-            <!--<th>Fecha ingreso al equipo</th>-->
-            <!--<th>goles</th>-->
-          <!--</tr>-->
-        <!--</ng-template>-->
-        <!--<ng-template pTemplate="body">-->
-            <!--<tr>-->
-              <!--<td>dfgdfgd</td>-->
-              <!--<td>dfgdfgd</td>-->
-              <!--<td>dfgdfgd</td>-->
-              <!--<td>dfgdfgd</td>-->
-              <!--<td>dfgdfgd</td>-->
-              <!--<td>dfgdfgd</td>-->
-            <!--</tr>-->
-          <!--&lt;!&ndash;<tr  *ngFor="let datosTabla of datos[0].detalle; let i = index">&ndash;&gt;-->
-            <!--&lt;!&ndash;<th>{{i+1}}</th>&ndash;&gt;-->
-            <!--&lt;!&ndash;<td >{{arregloJugadores}}</td>&ndash;&gt;-->
-            <!--&lt;!&ndash;<td >{{datosTabla.codigo}}</td>&ndash;&gt;-->
-            <!--&lt;!&ndash;<td >{{datosTabla.descripcion}}</td>&ndash;&gt;-->
-            <!--&lt;!&ndash;<td >{{cambiarBolean(datosTabla.activo)}}</td>&ndash;&gt;-->
-            <!--&lt;!&ndash;<td >{{datosTabla.fechaCreacion}}</td>&ndash;&gt;-->
-            <!--&lt;!&ndash;<td >{{datosTabla.horasPorSemana}}</td>&ndash;&gt;-->
-            <!--&lt;!&ndash;<td >{{datosTabla.estudianteID}}</td>&ndash;&gt;-->
-          <!--&lt;!&ndash;</tr>&ndash;&gt;-->
 
-        <!--</ng-template>-->
-      <!--</p-table>-->
       <table class="table">
         <thead>
         <tr>
@@ -301,10 +267,410 @@
         </tr>
 
 
+
         </tbody>
       </table>
     </div>
   </div>
+      <div [hidden]=mostrarOculato2>
+        <div class="row"><p></p></div>
+        <div class="row"><p></p></div>
+        <div class="row">
+          <div class="col-sm-6">
+            <!--<app-entrada-dos></app-entrada-dos>-->
+            <h3 style="text-align: center">Informacion del Jugador</h3>
+            <div class="row"><p></p></div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Numero de Camiseta</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #numeroCamiseta1  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Nombre en la Camiseta</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #nombreCamiseta1  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Nombre del Jugador</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #nombreJugador1  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Poder especial dos</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #poder1  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Fecha de Ingreso al equipo</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #imgresoJugador1  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>goles</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #golesJugador1  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <!--<div class="row">-->
+            <!--<div class="col-sm-6">-->
+            <!--<p>Codigo del equipo</p>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+            <!--<p-chips formControlName="cities"></p-chips>-->
+            <!--</div>-->
+            <!--</div>-->
+
+
+            <div class="row">
+              <div class="col-sm-6">
+                <button pButton type="button" (click)="funcionIngresarJugadorEquipo11(numeroCamiseta1.value,nombreCamiseta1.value,nombreJugador1.value,poder1.value,imgresoJugador1.value,golesJugador1.value)" label="Crear" ></button>
+              </div>
+              <div class="col-sm-6">
+                <button pButton type="button" label="Limpiar" ></button>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-6">
+            <!--<app-simple-card></app-simple-card>-->
+            <p-card [title]=arrayEquipos[1].nombreEquipo [style]="{width: '360px'}">
+              <div>{{arrayEquipos[1].nombreEquipo}}, en la actualidad se encuentra jugando en la liga {{arrayEquipos[1].ligaEquipo}}
+                su fecha de creacion es {{arrayEquipos[1].fechaCreacionEquipo}} con un total de {{arrayEquipos[1].copasGanadasEquipo}}copas
+                ganadas cursando el campeonato actual {{arrayEquipos[1].campeonatoActualEquipo}}.
+              </div>
+            </p-card>
+
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="row"><p></p></div>
+        <div class="row">
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">ID Jugador</th>
+              <th scope="col">Numero Camiseta</th>
+              <th scope="col">Nombre en la Camiseta</th>
+              <th scope="col">Nombre Jugador</th>
+              <th scope="col">Poder</th>
+              <th scope="col">Fecha de Ingreso</th>
+              <th scope="col">Goles</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>{{jugador2.numeroCamiseta}}</td>
+              <td>{{jugador2.nombreCamiseta}}</td>
+              <td>{{jugador2.nombreJugador}}</td>
+              <td>{{jugador2.poderJugador}}</td>
+              <td>{{jugador2.fechaIngresoJugador}}</td>
+              <td>{{jugador2.golesJugador}}</td>
+            </tr>
+
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div [hidden]=mostrarOculato3>
+        <div class="row"><p></p></div>
+        <div class="row"><p></p></div>
+        <div class="row">
+          <div class="col-sm-6">
+            <!--<app-entrada-dos></app-entrada-dos>-->
+            <h3 style="text-align: center">Informacion del Jugador</h3>
+            <div class="row"><p></p></div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Numero de Camiseta</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #numeroCamiseta2  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Nombre en la Camiseta</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #nombreCamiseta2  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Nombre del Jugador</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #nombreJugador2 value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Poder especial dos</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #poder2  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Fecha de Ingreso al equipo</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #imgresoJugador2  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>goles</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #golesJugador2  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <!--<div class="row">-->
+            <!--<div class="col-sm-6">-->
+            <!--<p>Codigo del equipo</p>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+            <!--<p-chips formControlName="cities"></p-chips>-->
+            <!--</div>-->
+            <!--</div>-->
+
+
+            <div class="row">
+              <div class="col-sm-6">
+                <button pButton type="button" (click)="funcionIngresarJugadorEquipo12(numeroCamiseta2.value,nombreCamiseta2.value,nombreJugador2.value,poder2.value,imgresoJugador2.value,golesJugador2.value)" label="Crear" ></button>
+              </div>
+              <div class="col-sm-6">
+                <button pButton type="button" label="Limpiar" ></button>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-6">
+            <!--<app-simple-card></app-simple-card>-->
+            <p-card [title]=arrayEquipos[2].nombreEquipo [style]="{width: '360px'}">
+              <div>{{arrayEquipos[2].nombreEquipo}}, en la actualidad se encuentra jugando en la liga {{arrayEquipos[2].ligaEquipo}}
+                su fecha de creacion es {{arrayEquipos[2].fechaCreacionEquipo}} con un total de {{arrayEquipos[2].copasGanadasEquipo}}copas
+                ganadas cursando el campeonato actual {{arrayEquipos[2].campeonatoActualEquipo}}.
+              </div>
+            </p-card>
+
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="row"><p></p></div>
+        <div class="row">
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">ID Jugador</th>
+              <th scope="col">Numero Camiseta</th>
+              <th scope="col">Nombre en la Camiseta</th>
+              <th scope="col">Nombre Jugador</th>
+              <th scope="col">Poder</th>
+              <th scope="col">Fecha de Ingreso</th>
+              <th scope="col">Goles</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>{{jugador3.numeroCamiseta}}</td>
+              <td>{{jugador3.nombreCamiseta}}</td>
+              <td>{{jugador3.nombreJugador}}</td>
+              <td>{{jugador3.poderJugador}}</td>
+              <td>{{jugador3.fechaIngresoJugador}}</td>
+              <td>{{jugador3.golesJugador}}</td>
+            </tr>
+
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div [hidden]=mostrarOculato4>
+        <div class="row"><p></p></div>
+        <div class="row"><p></p></div>
+        <div class="row">
+          <div class="col-sm-6">
+            <!--<app-entrada-dos></app-entrada-dos>-->
+            <h3 style="text-align: center">Informacion del Jugador</h3>
+            <div class="row"><p></p></div>
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Numero de Camiseta</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #numeroCamiseta3  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Nombre en la Camiseta</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #nombreCamiseta3  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Nombre del Jugador</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #nombreJugador3 value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Poder especial dos</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #poder3  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Fecha de Ingreso al equipo</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #imgresoJugador3  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>goles</p>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" #golesJugador3  value={{limpiarFecha}}  >
+                <!--<p-chips formControlName="cities"></p-chips>-->
+              </div>
+            </div>
+
+            <!--<div class="row">-->
+            <!--<div class="col-sm-6">-->
+            <!--<p>Codigo del equipo</p>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+            <!--<p-chips formControlName="cities"></p-chips>-->
+            <!--</div>-->
+            <!--</div>-->
+
+
+            <div class="row">
+              <div class="col-sm-6">
+                <button pButton type="button" (click)="funcionIngresarJugadorEquipo13(numeroCamiseta3.value,nombreCamiseta3.value,nombreJugador3.value,poder3.value,imgresoJugador3.value,golesJugador3.value)" label="Crear" ></button>
+              </div>
+              <div class="col-sm-6">
+                <button pButton type="button" label="Limpiar" ></button>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-6">
+            <!--<app-simple-card></app-simple-card>-->
+            <p-card [title]=arrayEquipos[3].nombreEquipo [style]="{width: '360px'}">
+              <div>{{arrayEquipos[3].nombreEquipo}}, en la actualidad se encuentra jugando en la liga {{arrayEquipos[3].ligaEquipo}}
+                su fecha de creacion es {{arrayEquipos[3].fechaCreacionEquipo}} con un total de {{arrayEquipos[3].copasGanadasEquipo}}copas
+                ganadas cursando el campeonato actual {{arrayEquipos[3].campeonatoActualEquipo}}.
+              </div>
+            </p-card>
+
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="row"><p></p></div>
+        <div class="row">
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">ID Jugador</th>
+              <th scope="col">Numero Camiseta</th>
+              <th scope="col">Nombre en la Camiseta</th>
+              <th scope="col">Nombre Jugador</th>
+              <th scope="col">Poder</th>
+              <th scope="col">Fecha de Ingreso</th>
+              <th scope="col">Goles</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>{{jugador4.numeroCamiseta}}</td>
+              <td>{{jugador4.nombreCamiseta}}</td>
+              <td>{{jugador4.nombreJugador}}</td>
+              <td>{{jugador4.poderJugador}}</td>
+              <td>{{jugador4.fechaIngresoJugador}}</td>
+              <td>{{jugador4.golesJugador}}</td>
+            </tr>
+
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
 
 

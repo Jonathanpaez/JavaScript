@@ -138,6 +138,22 @@ export class AppComponent {
     this.jugador1.fechaIngresoJugador=fechaI;
     this.jugador1.golesJugador=golesJ;
   }
+  funcionIngresarJugadorEquipo11(numeroC:string,nombreC:string,nombreJ:string,poderJ:string,fechaI:string,golesJ:string){
+    this.jugador2.numeroCamiseta=numeroC;
+    this.jugador2.nombreCamiseta=nombreC;
+    this.jugador2.nombreJugador=nombreJ;
+    this.jugador2.poderJugador=poderJ;
+    this.jugador2.fechaIngresoJugador=fechaI;
+    this.jugador2.golesJugador=golesJ;
+  }
+  funcionIngresarJugadorEquipo12(numeroC:string,nombreC:string,nombreJ:string,poderJ:string,fechaI:string,golesJ:string){
+    this.jugador3.numeroCamiseta=numeroC;
+    this.jugador3.nombreCamiseta=nombreC;
+    this.jugador3.nombreJugador=nombreJ;
+    this.jugador3.poderJugador=poderJ;
+    this.jugador3.fechaIngresoJugador=fechaI;
+    this.jugador3.golesJugador=golesJ;
+  }
   jugador1={
     numeroCamiseta:"",
     nombreCamiseta:"",
@@ -146,6 +162,31 @@ export class AppComponent {
     fechaIngresoJugador:"",
     golesJugador:"",
   };
+  jugador2={
+    numeroCamiseta:"",
+    nombreCamiseta:"",
+    nombreJugador:"",
+    poderJugador:"",
+    fechaIngresoJugador:"",
+    golesJugador:"",
+  };
+  jugador3={
+    numeroCamiseta:"",
+    nombreCamiseta:"",
+    nombreJugador:"",
+    poderJugador:"",
+    fechaIngresoJugador:"",
+    golesJugador:"",
+  };
+  jugador4={
+    numeroCamiseta:"",
+    nombreCamiseta:"",
+    nombreJugador:"",
+    poderJugador:"",
+    fechaIngresoJugador:"",
+    golesJugador:"",
+  };
+
 
 
 
@@ -166,7 +207,14 @@ export class AppComponent {
     this.limpiarLiga='  ';
     this.limpiarNombre='  ';
   }
-
+  funcionIngresarJugadorEquipo13(numeroC:string,nombreC:string,nombreJ:string,poderJ:string,fechaI:string,golesJ:string){
+    this.jugador4.numeroCamiseta=numeroC;
+    this.jugador4.nombreCamiseta=nombreC;
+    this.jugador4.nombreJugador=nombreJ;
+    this.jugador4.poderJugador=poderJ;
+    this.jugador4.fechaIngresoJugador=fechaI;
+    this.jugador4.golesJugador=golesJ;
+  }
 
 
 
