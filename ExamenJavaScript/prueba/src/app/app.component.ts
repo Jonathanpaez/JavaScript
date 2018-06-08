@@ -86,10 +86,78 @@ export class AppComponent {
 
 
   };
+  funcionTabla(valor:String){
+    if (valor==="1"){
+      this.mostrarOculato=false;
+      this.mostrarOculato2=true;
+      this.mostrarOculato3=true;
+      this.mostrarOculato4=true;
+    }
+    if (valor==="2"){
+      this.mostrarOculato=true;
+      this.mostrarOculato2=false;
+      this.mostrarOculato3=true;
+      this.mostrarOculato4=true;
+    }
+    if (valor==="3"){
+      this.mostrarOculato=true;
+      this.mostrarOculato2=true;
+      this.mostrarOculato3=false;
+      this.mostrarOculato4=true;
+    }
+    if (valor==="4"){
+      this.mostrarOculato=true;
+      this.mostrarOculato2=true;
+      this.mostrarOculato3=true;
+      this.mostrarOculato4=false;
+    }
+
+  }
+
+  arregloJugadores1 = [
+    {
+      numeroCamiseta:"",
+      nombreCamiseta:"",
+      nombreJugador:"",
+      poderJugador:"",
+      fechaIngresoJugador:"",
+      golesJugador:"",
+    }
+  ];
+  contadorjugadorEquipo1=0;
+
+  funcionIngresarJugadorEquipo1(numeroC:string,nombreC:string,nombreJ:string,poderJ:string,fechaI:string,golesJ:string){
+    this.arregloJugadores1.push({numeroCamiseta:numeroC,nombreCamiseta:nombreC,nombreJugador:nombreJ,poderJugador:poderJ,fechaIngresoJugador:fechaI,golesJugador:golesJ});
+    console.log(numeroC);
+  }
+  funcionIngresarJugadorEquipo10(numeroC:string,nombreC:string,nombreJ:string,poderJ:string,fechaI:string,golesJ:string){
+    this.jugador1.numeroCamiseta=numeroC;
+    this.jugador1.nombreCamiseta=nombreC;
+    this.jugador1.nombreJugador=nombreJ;
+    this.jugador1.poderJugador=poderJ;
+    this.jugador1.fechaIngresoJugador=fechaI;
+    this.jugador1.golesJugador=golesJ;
+  }
+  jugador1={
+    numeroCamiseta:"",
+    nombreCamiseta:"",
+    nombreJugador:"",
+    poderJugador:"",
+    fechaIngresoJugador:"",
+    golesJugador:"",
+  };
+
+
+
+
   oculto1=true;
   oculto2=true;
   oculto3=true;
   oculto4=true;
+  mostrarOculato=true;
+  mostrarOculato2=true;
+  mostrarOculato3=true;
+  mostrarOculato4=true;
 
   funcionLimpiar(){
     this.limpiarCampeonato='  ';

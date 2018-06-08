@@ -116,148 +116,196 @@
         <div class="col-sm-2">
           <div class="row " [hidden]=oculto1>
             <!--<app-equipos-ingresados></app-equipos-ingresados>-->
-            <button type="button" class="btn btn-primary btn-lg">{{arrayEquipos[0].nombreEquipo}}</button>
+            <button type="button" (click)="funcionTabla('1')" class="btn btn-primary btn-lg">{{arrayEquipos[0].nombreEquipo}}</button>
           </div>
         </div>
         <div class="col-sm-2">
           <div class="row " [hidden]=oculto2>
             <!--<app-equipos-ingresados></app-equipos-ingresados>-->
-            <button type="button" class="btn btn-primary btn-lg">{{arrayEquipos[1].nombreEquipo}}</button>
+            <button type="button"  (click)="funcionTabla('2')" class="btn btn-primary btn-lg">{{arrayEquipos[1].nombreEquipo}}</button>
           </div>
         </div>
         <div class="col-sm-2">
           <div class="row " [hidden]=oculto3>
             <!--<app-equipos-ingresados></app-equipos-ingresados>-->
-            <button type="button" class="btn btn-primary btn-lg">{{arrayEquipos[2].nombreEquipo}}</button>
+            <button type="button" (click)="funcionTabla('3')" class="btn btn-primary btn-lg">{{arrayEquipos[2].nombreEquipo}}</button>
           </div>
         </div>
         <div class="col-sm-2">
           <div class="row " [hidden]=oculto4>
             <!--<app-equipos-ingresados></app-equipos-ingresados>-->
-            <button type="button" class="btn btn-primary btn-lg">{{arrayEquipos[3].nombreEquipo}}</button>
+            <button type="button" (click)="funcionTabla('4')" class="btn btn-primary btn-lg">{{arrayEquipos[3].nombreEquipo}}</button>
           </div>
         </div>
       </div>
 
-  <div class="row"><p></p></div>
-  <div class="row"><p></p></div>
-  <div class="row">
-    <div class="col-sm-6">
-      <!--<app-entrada-dos></app-entrada-dos>-->
-      <h3 style="text-align: center">Informacion del Jugador</h3>
-      <div class="row"><p></p></div>
-      <div class="row">
-        <div class="col-sm-6">
-          <p>Numero de Camiseta</p>
+  <div [hidden]=mostrarOculato>
+    <div class="row"><p></p></div>
+    <div class="row"><p></p></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <!--<app-entrada-dos></app-entrada-dos>-->
+        <h3 style="text-align: center">Informacion del Jugador</h3>
+        <div class="row"><p></p></div>
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Numero de Camiseta</p>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" #numeroCamiseta  value={{limpiarFecha}}  >
+            <!--<p-chips formControlName="cities"></p-chips>-->
+          </div>
         </div>
-        <div class="col-sm-6">
-          <p-chips formControlName="cities"></p-chips>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Nombre en la Camiseta</p>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" #nombreCamiseta  value={{limpiarFecha}}  >
+            <!--<p-chips formControlName="cities"></p-chips>-->
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Nombre del Jugador</p>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" #nombreJugador  value={{limpiarFecha}}  >
+            <!--<p-chips formControlName="cities"></p-chips>-->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Poder especial dos</p>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" #poder  value={{limpiarFecha}}  >
+            <!--<p-chips formControlName="cities"></p-chips>-->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Fecha de Ingreso al equipo</p>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" #imgresoJugador  value={{limpiarFecha}}  >
+            <!--<p-chips formControlName="cities"></p-chips>-->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>goles</p>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" #golesJugador  value={{limpiarFecha}}  >
+            <!--<p-chips formControlName="cities"></p-chips>-->
+          </div>
+        </div>
+
+        <!--<div class="row">-->
+          <!--<div class="col-sm-6">-->
+            <!--<p>Codigo del equipo</p>-->
+          <!--</div>-->
+          <!--<div class="col-sm-6">-->
+            <!--<p-chips formControlName="cities"></p-chips>-->
+          <!--</div>-->
+        <!--</div>-->
+
+
+        <div class="row">
+          <div class="col-sm-6">
+            <button pButton type="button" (click)="funcionIngresarJugadorEquipo10(numeroCamiseta.value,nombreCamiseta.value,nombreJugador.value,poder.value,fecha.value,golesJugador.value)" label="Crear" ></button>
+          </div>
+          <div class="col-sm-6">
+            <button pButton type="button" label="Limpiar" ></button>
+          </div>
+        </div>
+
       </div>
+      <div class="col-sm-6">
+        <!--<app-simple-card></app-simple-card>-->
+        <p-card [title]=arrayEquipos[0].nombreEquipo [style]="{width: '360px'}">
+          <div>{{arrayEquipos[0].nombreEquipo}}, en la actualidad se encuentra jugando en la liga {{arrayEquipos[0].ligaEquipo}}
+            su fecha de creacion es {{arrayEquipos[0].fechaCreacionEquipo}} con un total de {{arrayEquipos[0].copasGanadasEquipo}}copas
+            ganadas cursando el campeonato actual {{arrayEquipos[0].campeonatoActualEquipo}}.
+          </div>
+        </p-card>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <p>Nombre en la Camiseta</p>
-        </div>
-        <div class="col-sm-6">
-          <p-chips formControlName="cities"></p-chips>
-        </div>
+        <br>
+        <br>
       </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <p>Nombre del Jugador</p>
-        </div>
-        <div class="col-sm-6">
-          <p-chips formControlName="cities"></p-chips>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <p>Poder especial dos</p>
-        </div>
-        <div class="col-sm-6">
-          <p-chips formControlName="cities"></p-chips>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <p>Fecha de Ingreso al equipo</p>
-        </div>
-        <div class="col-sm-6">
-          <p-chips formControlName="cities"></p-chips>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <p>goles</p>
-        </div>
-        <div class="col-sm-6">
-          <p-chips formControlName="cities"></p-chips>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <p>Codigo del equipo</p>
-        </div>
-        <div class="col-sm-6">
-          <p-chips formControlName="cities"></p-chips>
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="col-sm-6">
-          <button pButton type="button" label="Crear" ></button>
-        </div>
-        <div class="col-sm-6">
-          <button pButton type="button" label="Limpiar" ></button>
-        </div>
-      </div>
-
     </div>
-    <div class="col-sm-6">
-      <!--<app-simple-card></app-simple-card>-->
-      <p-card title="Liga Deportiva Universitaria de Quito" [style]="{width: '360px'}">
-        <div>Liga Deportiva Universitaria, conocido también como Liga de Quito o simplemente Liga y por sus siglas LDU, es un club deportivo ecuatoriano originario de la ciudad de Quito. Inició sus actividades en 1918 como un equipo de fútbol universitario de la Universidad Central del Ecuador y el 11 de enero de 1930 fue fundado oficialmente como Liga Deportiva Universitaria.9
-          Su disciplina principal es el fútbol en el que es parte de la Serie A de Ecuador desde 1960.
-        </div>
-      </p-card>
+    <div class="row"><p></p></div>
+    <div class="row">
+      <!--<app-talba-prime></app-talba-prime>-->
+      <!--<h3 class="first">Jugadores</h3>-->
+      <!--<p-table >-->
+        <!--<ng-template pTemplate="header">-->
+          <!--<tr>-->
+            <!--<th>Numero en la Camiseta</th>-->
+            <!--<th>Nombre en la Camiseta</th>-->
+            <!--<th>Nombre del Jugador</th>-->
+            <!--<th>Poder del jugador</th>-->
+            <!--<th>Fecha ingreso al equipo</th>-->
+            <!--<th>goles</th>-->
+          <!--</tr>-->
+        <!--</ng-template>-->
+        <!--<ng-template pTemplate="body">-->
+            <!--<tr>-->
+              <!--<td>dfgdfgd</td>-->
+              <!--<td>dfgdfgd</td>-->
+              <!--<td>dfgdfgd</td>-->
+              <!--<td>dfgdfgd</td>-->
+              <!--<td>dfgdfgd</td>-->
+              <!--<td>dfgdfgd</td>-->
+            <!--</tr>-->
+          <!--&lt;!&ndash;<tr  *ngFor="let datosTabla of datos[0].detalle; let i = index">&ndash;&gt;-->
+            <!--&lt;!&ndash;<th>{{i+1}}</th>&ndash;&gt;-->
+            <!--&lt;!&ndash;<td >{{arregloJugadores}}</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;<td >{{datosTabla.codigo}}</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;<td >{{datosTabla.descripcion}}</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;<td >{{cambiarBolean(datosTabla.activo)}}</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;<td >{{datosTabla.fechaCreacion}}</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;<td >{{datosTabla.horasPorSemana}}</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;<td >{{datosTabla.estudianteID}}</td>&ndash;&gt;-->
+          <!--&lt;!&ndash;</tr>&ndash;&gt;-->
 
-      <br>
-      <br>
+        <!--</ng-template>-->
+      <!--</p-table>-->
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">ID Jugador</th>
+          <th scope="col">Numero Camiseta</th>
+          <th scope="col">Nombre en la Camiseta</th>
+          <th scope="col">Nombre Jugador</th>
+          <th scope="col">Poder</th>
+          <th scope="col">Fecha de Ingreso</th>
+          <th scope="col">Goles</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>{{jugador1.numeroCamiseta}}</td>
+          <td>{{jugador1.nombreCamiseta}}</td>
+          <td>{{jugador1.nombreJugador}}</td>
+          <td>{{jugador1.poderJugador}}</td>
+          <td>{{jugador1.fechaIngresoJugador}}</td>
+          <td>{{jugador1.golesJugador}}</td>
+        </tr>
+
+
+        </tbody>
+      </table>
     </div>
   </div>
-  <div class="row"><p></p></div>
-  <div class="row">
-    <!--<app-talba-prime></app-talba-prime>-->
-    <h3 class="first">Basic</h3>
-    <p-table [value]="cars">
-      <ng-template pTemplate="header">
-        <tr>
-          <th>Vin</th>
-          <th>Year</th>
-          <th>Brand</th>
-          <th>Color</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body">
-        <tr>
-          <td>"dfgdf"</td>
-          <td>"dfgdf"</td>
-          <td>"dfgdf"</td>
-          <td>"dfgdf"</td>
-        </tr>
 
-
-      </ng-template>
-    </p-table>
-
-  </div>
 
 
 
